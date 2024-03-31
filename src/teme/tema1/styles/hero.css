@@ -1,0 +1,35 @@
+.hero {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: calc(100vw - 4rem);
+  height: calc(100vh - 4rem);
+  padding: 0rem 2rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 6rem;
+  line-height: 5rem;
+  @media (max-width: 600px) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }  
+  color: var(--primary-main-color);
+  text-shadow: -2px -2px 0 var(--primary-dark-color),
+    2px 2px 0 var(--primary-light-color);
+}
+
+#hero-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

@@ -1,0 +1,25 @@
+.cursive-font {
+  font-family: "Mr Dafoe", cursive;
+  font-weight: 400;
+  text-align: center;
+  user-select: none;
+}
+
+.button-primary {
+  border: none;
+  background-color: var(--background-primary-color);
+  filter: grayscale(100%) opacity(0.7);
+  transition: 400ms;
+}
+
+.button-primary > span {
+  color: var(--primary-main-color);
+}
+
+.button-primary:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+.icon-medium {
+  font-size: 2rem;
+}
