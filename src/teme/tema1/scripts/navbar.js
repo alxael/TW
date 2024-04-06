@@ -1,17 +1,25 @@
-window.onscroll = () => {
-  if (window.scrollY < window.innerHeight / 4)
-    document.getElementById("navbar").style.opacity = 0;
-  else document.getElementById("navbar").style.opacity = 1;
+// scroll down to section of section button click
+const sections = ["about", "work", "contact"];
+let sectionsHandleOnClick = {};
+for (const section of sections) {
+  sectionsHandleOnClick[section] = () => {
+    const contactSection = document.getElementById(section);
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  };
+}
+
+// change theme on theme button click
+const themeHandleOnClick = () => {
+  isThemeDark = !isThemeDark;
+  setTheme(isThemeDark);
 };
 
-window.onload = () => {
-  const sections = ["about", "work", "contact"];
-  for (const section of sections) {
-    document
-      .getElementById(`${section}-button`)
-      .addEventListener("click", () => {
-        const contactSection = document.getElementById(section);
-        contactSection.scrollIntoView({ behavior: "smooth" });
-      });
+// open dropdown on menu button click
+const menuHandleOnClick = () => {
+  const dropdownContent = document.getElementById("navbar-dropdown-content");
+  if (dropdownContent.style.display === "flex") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "flex";
   }
 };

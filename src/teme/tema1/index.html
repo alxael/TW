@@ -32,7 +32,8 @@
     <link rel="stylesheet" href="styles/contact.css" />
 
     <!-- Scripts -->
-    <script src="scripts/navbar.js"></script>
+    <script src="index.js"></script>
+    <script src="scripts/navbar.js" defer></script>
 
     <title>Natural Light Works</title>
   </head>
@@ -40,21 +41,83 @@
     <!-- Navbar -->
     <nav id="navbar">
       <h1 class="navbar-title cursive-font">Natural Light Works</h1>
-      <button class="navbar-item button-primary" id="about-button">
+      <button
+        class="navbar-item button-primary"
+        id="about-button"
+        onclick="sectionsHandleOnClick.about()"
+      >
         <span class="material-symbols-outlined icon-medium">spoke</span>
+        <span>About</span>
       </button>
-      <button class="navbar-item button-primary" id="work-button">
+      <button
+        class="navbar-item button-primary"
+        id="work-button"
+        onclick="sectionsHandleOnClick.work()"
+      >
         <span class="material-symbols-outlined icon-medium">globe</span>
+        <span>Work</span>
       </button>
-      <button class="navbar-item button-primary" id="contact-button">
+      <button
+        class="navbar-item button-primary"
+        id="contact-button"
+        onclick="sectionsHandleOnClick.contact()"
+      >
         <span class="material-symbols-outlined icon-medium">contact_page</span>
+        <span>Contact</span>
       </button>
-      <button class="navbar-item button-primary" id="menu-button">
-        <span class="material-symbols-outlined icon-medium">menu</span>
-      </button>
-      <button class="navbar-item button-primary" id="theme-button">
+      <button
+        class="navbar-item button-primary"
+        id="theme-button"
+        onclick="themeHandleOnClick()"
+      >
         <span class="material-symbols-outlined icon-medium">contrast</span>
+        <span>Theme</span>
       </button>
+      <div class="navbar-dropdown">
+        <button
+          class="navbar-item button-primary"
+          id="menu-button"
+          onclick="menuHandleOnClick()"
+        >
+          <span class="material-symbols-outlined icon-medium">menu</span>
+        </button>
+        <div id="navbar-dropdown-content">
+          <button
+            class="navbar-dropdown-item button-primary"
+            id="about-button"
+            onclick="sectionsHandleOnClick.about()"
+          >
+            <span class="material-symbols-outlined icon-medium">spoke</span>
+            <span>About</span>
+          </button>
+          <button
+            class="navbar-dropdown-item button-primary"
+            id="work-button"
+            onclick="sectionsHandleOnClick.work()"
+          >
+            <span class="material-symbols-outlined icon-medium">globe</span>
+            <span>Work</span>
+          </button>
+          <button
+            class="navbar-dropdown-item button-primary"
+            id="contact-button"
+            onclick="sectionsHandleOnClick.contact()"
+          >
+            <span class="material-symbols-outlined icon-medium"
+              >contact_page</span
+            >
+            <span>Contact</span>
+          </button>
+          <hr class="navbar-dropdown-divider" />
+          <button
+            class="navbar-dropdown-item button-primary"
+            onclick="themeHandleOnClick()"
+          >
+            <span class="material-symbols-outlined icon-medium">contrast</span>
+            <span>Theme</span>
+          </button>
+        </div>
+      </div>
     </nav>
 
     <main>
@@ -67,6 +130,47 @@
       </div>
 
       <!-- About -->
+      <svg
+        viewBox="0 0 2000 1000"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMaxYMid slice"
+        id="about-background"
+      >
+        <g>
+          <rect width="2000" height="1000" />
+          <path
+            d="M3.5 504.5C761.1 341.7 1655.83 483.667 2008.5 575"
+            class="background-path"
+            pathLength="1"
+          />
+          <path
+            d="M7 253C1304.91 453.383 1488.02 321.378 1997.5 168"
+            class="background-path"
+            pathLength="1"
+          />
+          <path
+            d="M3.5 656C3.5 656 499.5 830 939.5 571C1379.5 312 2005 312 2005 312"
+            class="background-path"
+            pathLength="1"
+          />
+          <path
+            d="M3.5 375C977.1 656.2 695 1037.5 2005 475"
+            class="background-path"
+            pathLength="1"
+          />
+          <path
+            d="M2005 704.5C2005 704.5 1976.4 721.412 1379.5 893C782.598 1064.59 322.204 753.351 3.5 837.5"
+            class="background-path"
+            pathLength="1"
+          />
+          <path
+            d="M-0.5 168C-0.5 168 577 316 932 123.5C1287 -69 2005 268 2005 268"
+            class="background-path"
+            pathLength="1"
+          />
+        </g>
+      </svg>
       <div id="about">
         <h1>About section</h1>
       </div>

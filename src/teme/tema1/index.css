@@ -1,4 +1,7 @@
 :root {
+  /* Breakpoints */
+  --breakpoint-md: 600px;
+
   /* Layers */
   --background-layer: 900;
   --primary-layer: 1000;
@@ -8,15 +11,33 @@
   --primary-light-color: #64b5f6;
   --primary-main-color: #2196f3;
   --primary-dark-color: #1976d2;
-  --background-primary-color: #ffffff;
-  --background-secondary-color: #eeeeee;
+
+  --background-primary-color-dark: #212121;
+  --background-secondary-color-dark: #424242;
+  --font-primary-color-dark: #ffffff;
+
+  --background-primary-color-light: #ffffff;
+  --background-secondary-color-light: #eeeeee;
+  --font-primary-color-light: #000000;
+
+  @media (prefers-color-scheme: dark) {
+    --background-primary-color: var(--background-primary-color-dark);
+    --background-secondary-color: var(--background-secondary-color-dark);
+    --font-primary-color: var(--font-primary-color-dark);
+  }
+  --background-primary-color: var(--background-primary-color-light);
+  --background-secondary-color: var(--background-secondary-color-light);
+  --font-primary-color: var(--font-primary-color-light);
 
   /* Fonts */
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  color: var(--font-primary-color);
   -webkit-font-smoothing: antialiased;
+}
+@media screen {
 }
 
 body {
