@@ -1,8 +1,66 @@
 #work {
   width: 100vw;
-  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
+}
+
+#work > p {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#work > .work-item {
+  --width: clamp(15rem, 80vw, 60rem);
+  --height: clamp(25rem, 30vh, 40rem);
+
+  z-index: var(--primary-layer);
+  background-color: var(--background-primary-color);
+  width: var(--width);
+  height: var(--height);
+  border-radius: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.work-item:hover > img {
+  opacity: 0.6;
+}
+
+.work-item > img {
+  z-index: var(--image-layer);
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+.work-item > .description-item {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: var(--image-description-layer);
+  transition: opacity 500ms ease-out;
+}
+
+.work-item:hover > .description-item {
+  visibility: visible;
+  opacity: 1;
+}
+
+.work-item > h2 {
+  margin: 1.5rem 0rem 0rem 2rem;
+}
+
+.work-item > a {
+  margin: calc(-2.5rem + var(--height)) 0rem 0rem 2rem;
+}
+
+.work-item > p {
+  margin: 3.5rem 0rem 0rem 2rem;
 }

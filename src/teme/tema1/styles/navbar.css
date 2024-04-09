@@ -14,7 +14,7 @@
   background-color: var(--background-primary-color);
 }
 
-.navbar-title {
+#navbar > .navbar-title {
   font-size: 2rem;
   @media (max-width: 600px) {
     font-size: 1.75rem;
@@ -25,7 +25,7 @@
   color: var(--primary-main-color);
 }
 
-.navbar-item {
+#navbar > .navbar-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,19 +35,19 @@
   background: transparent;
 }
 
-.navbar-item:nth-child(2) {
+#navbar > .navbar-item:nth-child(2) {
   margin-left: auto;
 }
 
-.navbar-item:nth-child(2),
-.navbar-item:nth-child(3),
-.navbar-item:nth-child(4) {
+#navbar > .navbar-item:nth-child(2),
+#navbar > .navbar-item:nth-child(3),
+#navbar > .navbar-item:nth-child(4) {
   @media (max-width: 600px) {
     display: none;
   }
 }
 
-#theme-button {
+#navbar > #theme-button {
   margin-left: 1.5rem;
   @media (max-width: 600px) {
     display: none;
@@ -61,14 +61,24 @@
   }
 }
 
-.navbar-dropdown {
+#navbar > .navbar-dropdown {
+  visibility: hidden;
   @media (max-width: 600px) {
     margin-left: auto;
+    visibility: visible;
   }
 }
 
+.navbar-dropdown:hover #navbar-dropdown-content {
+  opacity: 1;
+  max-height: 20rem;
+}
+
 #navbar-dropdown-content {
-  display: none;
+  display: flex;
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
   position: absolute;
   flex-direction: column;
   justify-content: center;
@@ -77,12 +87,14 @@
   right: 1.5rem;
   width: 10rem;
   background: var(--background-secondary-color);
+  border: 0.1rem solid var(--gray-500);
   z-index: var(--navbar-layer);
   padding: 0 1rem 1rem 1rem;
   border-radius: 0.5rem;
+  transition: opacity 500ms, max-height 1s ease-out;
 }
 
-.navbar-dropdown-item {
+#navbar-dropdown-content > button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -93,16 +105,16 @@
   margin-top: 1rem;
 }
 
-.navbar-dropdown-item > span:first-child {
-  margin-right: 1rem;
-}
-.navbar-dropdown-item > span:last-child {
-  font-size: 1rem;
-}
-
-.navbar-dropdown-divider {
-  border: 1px solid var(--primary-main-color);
+#navbar-dropdown-content > hr {
+  border: 1px solid var(--gray-500);
   margin: 1rem 0 0rem 0;
   width: 100%;
-  filter: grayscale(100%) opacity(0.7);
+}
+
+#navbar-dropdown-content > button > span:first-child {
+  margin-right: 1rem;
+}
+
+#navbar-dropdown-content > button > span:last-child {
+  font-size: 1rem;
 }

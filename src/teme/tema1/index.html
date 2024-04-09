@@ -27,9 +27,11 @@
     <link rel="stylesheet" href="styles/shared.css" />
     <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/about.css" />
     <link rel="stylesheet" href="styles/work.css" />
     <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/wind.css" />
 
     <!-- Scripts -->
     <script src="index.js"></script>
@@ -74,16 +76,12 @@
         <span>Theme</span>
       </button>
       <div class="navbar-dropdown">
-        <button
-          class="navbar-item button-primary"
-          id="menu-button"
-          onclick="menuHandleOnClick()"
-        >
+        <button class="navbar-item button-primary" id="menu-button">
           <span class="material-symbols-outlined icon-medium">menu</span>
         </button>
         <div id="navbar-dropdown-content">
           <button
-            class="navbar-dropdown-item button-primary"
+            class="button-primary"
             id="about-button"
             onclick="sectionsHandleOnClick.about()"
           >
@@ -91,7 +89,7 @@
             <span>About</span>
           </button>
           <button
-            class="navbar-dropdown-item button-primary"
+            class="button-primary"
             id="work-button"
             onclick="sectionsHandleOnClick.work()"
           >
@@ -99,7 +97,7 @@
             <span>Work</span>
           </button>
           <button
-            class="navbar-dropdown-item button-primary"
+            class="button-primary"
             id="contact-button"
             onclick="sectionsHandleOnClick.contact()"
           >
@@ -109,16 +107,55 @@
             <span>Contact</span>
           </button>
           <hr class="navbar-dropdown-divider" />
-          <button
-            class="navbar-dropdown-item button-primary"
-            onclick="themeHandleOnClick()"
-          >
+          <button class="button-primary" onclick="themeHandleOnClick()">
             <span class="material-symbols-outlined icon-medium">contrast</span>
             <span>Theme</span>
           </button>
         </div>
       </div>
     </nav>
+
+    <!-- Wind background -->
+    <svg
+      viewBox="0 0 1000 2000"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      id="wind-background"
+      preserveAspectRatio="none"
+    >
+      <g>
+        <path
+          d="M504.5 1996.5C341.7 1238.9 483.666 344.167 575 -8.5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M253 1993C453.383 695.089 321.378 511.984 168 2.5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M656 1996.5C656 1996.5 830 1500.5 571 1060.5C312 620.5 312 -5 312 -5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M375 1996.5C656.2 1022.9 1037.5 1305 475 -5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M704.5 -5C704.5 -5 721.412 23.5984 893 620.5C1064.59 1217.4 753.351 1677.8 837.5 1996.5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M168 2000.5C168 2000.5 316 1423 123.5 1068C-69.0001 713 268 -5 268 -5"
+          class="background-path"
+          pathLength="1"
+        />
+      </g>
+    </svg>
 
     <main>
       <!-- Hero -->
@@ -130,60 +167,161 @@
       </div>
 
       <!-- About -->
-      <svg
-        viewBox="0 0 2000 1000"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMaxYMid slice"
-        id="about-background"
-      >
-        <g>
-          <rect width="2000" height="1000" />
-          <path
-            d="M3.5 504.5C761.1 341.7 1655.83 483.667 2008.5 575"
-            class="background-path"
-            pathLength="1"
-          />
-          <path
-            d="M7 253C1304.91 453.383 1488.02 321.378 1997.5 168"
-            class="background-path"
-            pathLength="1"
-          />
-          <path
-            d="M3.5 656C3.5 656 499.5 830 939.5 571C1379.5 312 2005 312 2005 312"
-            class="background-path"
-            pathLength="1"
-          />
-          <path
-            d="M3.5 375C977.1 656.2 695 1037.5 2005 475"
-            class="background-path"
-            pathLength="1"
-          />
-          <path
-            d="M2005 704.5C2005 704.5 1976.4 721.412 1379.5 893C782.598 1064.59 322.204 753.351 3.5 837.5"
-            class="background-path"
-            pathLength="1"
-          />
-          <path
-            d="M-0.5 168C-0.5 168 577 316 932 123.5C1287 -69 2005 268 2005 268"
-            class="background-path"
-            pathLength="1"
-          />
-        </g>
-      </svg>
       <div id="about">
-        <h1>About section</h1>
+        <p>Who are we?</p>
+        <div class="about-content">
+          <div class="content-box">
+            <h1>Photography</h1>
+            <p>
+              We are a small team of photographers that places a great emphasis
+              on the principles of photography as an art form.
+            </p>
+          </div>
+          <div class="content-box">
+            <h1>Simply</h1>
+            <p>
+              We believe that photography, as complicated and technical as it
+              may be some times, is a simple and beautiful art form.
+            </p>
+          </div>
+          <div class="content-box">
+            <h1>Redefined</h1>
+            <p>
+              We consider that going out of your comfort zone is the basis of
+              achieving great feats, and as such, we strive to redefine our
+              methods and improve our skills constantly.
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- Work -->
       <div id="work">
-        <h1>Work section</h1>
+        <p>What do we do?</p>
+        <div class="work-item">
+          <h2 class="description-item">Alps</h2>
+          <p class="description-item">Seefeld, Austria</p>
+          <a
+            href="assets/alps-1.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="assets/alps-1.jpg" alt="alps-1" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Alps</h2>
+          <p class="description-item">Chamonix, France</p>
+          <a
+            href="assets/alps-2.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="assets/alps-2.jpg" alt="alps-2" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Alps</h2>
+          <p class="description-item">Zermatt, Switzerland</p>
+          <a
+            href="assets/alps-3.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="assets/alps-3.jpg" alt="alps-3" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Himalayas</h2>
+          <p class="description-item">Kathmandu, Nepal</p>
+          <a
+            href="assets/himalayas-1.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="assets/himalayas-1.jpg" alt="himalayas-1" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Himalayas</h2>
+          <p class="description-item">Chanderkhani Pass, India</p>
+          <a
+            href="assets/himalayas-2.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="assets/himalayas-2.jpg" alt="himalayas-2" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Himalayas</h2>
+          <p class="description-item">Annapurna region, Nepal</p>
+          <a
+            href="assets/himalayas-3.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="assets/himalayas-3.jpg" alt="himalayas-3" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">The Rocky Mountains</h2>
+          <p class="description-item">Yoho National Park, Canada</p>
+          <a
+            href="assets/rockys-1.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="assets/rockys-1.jpg" alt="rockys-1" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">The Rocky Mountains</h2>
+          <p class="description-item">
+            Mount Assiniboine Provincial Park, Canada
+          </p>
+          <a
+            href="assets/rockys-2.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="assets/rockys-2.jpg" alt="rockys-2" />
+        </div>
       </div>
 
       <!-- Contact -->
       <div id="contact">
-        <h1>Contact section</h1>
+        <div class="contact-info">
+          <h1>Wanna talk?</h1>
+          <p>
+            We love exploring beyond the borders of conventional photography,
+            and as such, we invite you to check out our studio, situated at
+            <a
+              href="https://maps.app.goo.gl/jQ2FXAru638N2JSH8"
+              class="link-primary"
+              >1 Barbados Avenue, Tampa, Florida</a
+            >. You may also contact us at this email address:
+            <a href="mailto:contact@naturallightworks.com" class="link-primary"
+              >contact@naturallightworks.com</a
+            >
+            for any additional inquiries.
+          </p>
+        </div>
+
+        <iframe
+          title="location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1426.7070893636246!2d-82.45307659597754!3d27.92768458665056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c4c01637a995%3A0x40b0fcd2d5b4a147!2s1%20Barbados%20Ave%2C%20Tampa%2C%20FL%2033606%2C%20USA!5e0!3m2!1sen!2sro!4v1712596003687!5m2!1sen!2sro"
+          class="location"
+          allowfullscreen="true"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </main>
+
+    <footer class="footer">
+      <p>&copy; Natural Light Works 2024 All Rights Reserved</p>
+    </footer>
   </body>
 </html>

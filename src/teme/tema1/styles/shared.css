@@ -23,3 +23,19 @@
 .icon-medium {
   font-size: 2rem;
 }
+
+.link-primary {
+  outline: none;
+  text-decoration: none;
+  color: var(--primary-main-color);
+  @media (max-width: 400px) {
+    word-break: break-all;
+  }
+}
+
+.link-image {
+  outline: none;
+  text-decoration: none;
+  color: var(--font-primary-color);
+  text-shadow: -2px -2px 0 var(--gray-500), 2px 2px 0 var(--gray-500);
+}

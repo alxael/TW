@@ -1,0 +1,55 @@
+#wind-background {
+  z-index: var(--background-layer);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  background: transparent;
+}
+
+#wind-background > g path:first-of-type {
+  animation-delay: 1s;
+  animation-duration: 4s;
+}
+#wind-background > g path:nth-of-type(1) {
+  animation-delay: 1.5s;
+  animation-duration: 5s;
+}
+#wind-background > g path:nth-of-type(2) {
+  animation-delay: 3s;
+  animation-duration: 4.5s;
+}
+#wind-background > g path:nth-of-type(3) {
+  animation-delay: 2s;
+  animation-duration: 3.5s;
+}
+#wind-background > g path:nth-of-type(4) {
+  animation-delay: 3.5s;
+  animation-duration: 4s;
+}
+#wind-background > g path:last-of-type {
+  animation-delay: 2s;
+  animation-duration: 5.5s;
+}
+
+.background-path {
+  stroke-width: 3;
+  stroke-dashoffset: -1;
+  stroke-dasharray: 0.2 1;
+  stroke: var(--primary-main-color);
+  animation: move-path 5s linear alternate infinite;
+}
+
+@keyframes move-path {
+  0% {
+    stroke-dashoffset: -1;
+    stroke-dasharray: 0.2 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 1;
+  }
+}

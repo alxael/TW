@@ -1,8 +1,21 @@
 #contact {
   width: 100vw;
-  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#contact > .location {
+  width: clamp(15rem, 80vw, 40rem);
+  height: clamp(25rem, 50vh, 40rem);
+  border: none;
+}
+
+#contact > .contact-info {
+  width: clamp(10rem, 60vw, 40rem);
+  padding: 0.5rem 2rem 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-secondary-color);
 }
