@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Scripts -->
+    <script src="js/index.js"></script>
+    <script src="js/main.js" defer></script>
+
+    <title>Natural Light Works</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <h1 class="navbar-title cursive-font">Natural Light Works</h1>
+      <button
+        class="navbar-item button-primary"
+        id="about-button"
+        onclick="sectionsHandleOnClick.about()"
+      >
+        <span class="material-symbols-outlined icon-medium">spoke</span>
+        <span>About</span>
+      </button>
+      <button
+        class="navbar-item button-primary"
+        id="work-button"
+        onclick="sectionsHandleOnClick.work()"
+      >
+        <span class="material-symbols-outlined icon-medium">globe</span>
+        <span>Work</span>
+      </button>
+      <button
+        class="navbar-item button-primary"
+        id="contact-button"
+        onclick="sectionsHandleOnClick.contact()"
+      >
+        <span class="material-symbols-outlined icon-medium">contact_page</span>
+        <span>Contact</span>
+      </button>
+      <button
+        class="navbar-item button-primary"
+        id="theme-button"
+        onclick="themeHandleOnClick()"
+      >
+        <span class="material-symbols-outlined icon-medium">contrast</span>
+        <span>Theme</span>
+      </button>
+      <div class="navbar-dropdown">
+        <button
+          class="navbar-item button-primary"
+          id="menu-button"
+          onclick="menuHandleOnClick()"
+        >
+          <span class="material-symbols-outlined icon-medium">menu</span>
+        </button>
+        <div id="navbar-dropdown-content">
+          <button
+            class="button-primary"
+            id="about-button"
+            onclick="sectionsHandleOnClick.about()"
+          >
+            <span class="material-symbols-outlined icon-medium">spoke</span>
+            <span>About</span>
+          </button>
+          <button
+            class="button-primary"
+            id="work-button"
+            onclick="sectionsHandleOnClick.work()"
+          >
+            <span class="material-symbols-outlined icon-medium">globe</span>
+            <span>Work</span>
+          </button>
+          <button
+            class="button-primary"
+            id="contact-button"
+            onclick="sectionsHandleOnClick.contact()"
+          >
+            <span class="material-symbols-outlined icon-medium"
+              >contact_page</span
+            >
+            <span>Contact</span>
+          </button>
+          <hr class="navbar-dropdown-divider" />
+          <button class="button-primary" onclick="themeHandleOnClick()">
+            <span class="material-symbols-outlined icon-medium">contrast</span>
+            <span>Theme</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Wind background -->
+    <svg
+      viewBox="0 0 1000 2000"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      id="wind-background"
+      preserveAspectRatio="none"
+    >
+      <g>
+        <path
+          d="M504.5 1996.5C341.7 1238.9 483.666 344.167 575 -8.5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M253 1993C453.383 695.089 321.378 511.984 168 2.5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M656 1996.5C656 1996.5 830 1500.5 571 1060.5C312 620.5 312 -5 312 -5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M375 1996.5C656.2 1022.9 1037.5 1305 475 -5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M704.5 -5C704.5 -5 721.412 23.5984 893 620.5C1064.59 1217.4 753.351 1677.8 837.5 1996.5"
+          class="background-path"
+          pathLength="1"
+        />
+        <path
+          d="M168 2000.5C168 2000.5 316 1423 123.5 1068C-69.0001 713 268 -5 268 -5"
+          class="background-path"
+          pathLength="1"
+        />
+      </g>
+    </svg>
+
+    <main>
+      <!-- Hero -->
+      <video autoplay muted loop id="hero-background">
+        <source src="img/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero">
+        <h1 class="hero-title cursive-font">Natural Light Works</h1>
+      </div>
+
+      <!-- About -->
+      <div id="about">
+        <p>Who are we?</p>
+        <div class="about-content">
+          <div class="content-box">
+            <h1>Photography</h1>
+            <p>
+              We are a small team of photographers that places a great emphasis
+              on the principles of photography as an art form.
+            </p>
+          </div>
+          <div class="content-box">
+            <h1>Simply</h1>
+            <p>
+              We believe that photography, as complicated and technical as it
+              may be some times, is a simple and beautiful art form.
+            </p>
+          </div>
+          <div class="content-box">
+            <h1>Redefined</h1>
+            <p>
+              We consider that going out of your comfort zone is the basis of
+              achieving great feats, and as such, we strive to redefine our
+              methods and improve our skills constantly.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work -->
+      <div id="work">
+        <p>What do we do?</p>
+        <div class="work-item">
+          <h2 class="description-item">Alps</h2>
+          <p class="description-item">Seefeld, Austria</p>
+          <a href="img/alps-1.jpg" download class="link-image description-item"
+            >Download</a
+          >
+          <img src="img/alps-1.jpg" alt="alps-1" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Alps</h2>
+          <p class="description-item">Chamonix, France</p>
+          <a href="img/alps-2.jpg" download class="link-image description-item"
+            >Download</a
+          >
+          <img src="img/alps-2.jpg" alt="alps-2" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Alps</h2>
+          <p class="description-item">Zermatt, Switzerland</p>
+          <a href="img/alps-3.jpg" download class="link-image description-item"
+            >Download</a
+          >
+          <img src="img/alps-3.jpg" alt="alps-3" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Himalayas</h2>
+          <p class="description-item">Kathmandu, Nepal</p>
+          <a
+            href="img/himalayas-1.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="img/himalayas-1.jpg" alt="himalayas-1" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Himalayas</h2>
+          <p class="description-item">Chanderkhani Pass, India</p>
+          <a
+            href="img/himalayas-2.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="img/himalayas-2.jpg" alt="himalayas-2" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">Himalayas</h2>
+          <p class="description-item">Annapurna region, Nepal</p>
+          <a
+            href="img/himalayas-3.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="img/himalayas-3.jpg" alt="himalayas-3" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">The Rocky Mountains</h2>
+          <p class="description-item">Yoho National Park, Canada</p>
+          <a
+            href="img/rockys-1.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="img/rockys-1.jpg" alt="rockys-1" />
+        </div>
+        <div class="work-item">
+          <h2 class="description-item">The Rocky Mountains</h2>
+          <p class="description-item">
+            Mount Assiniboine Provincial Park, Canada
+          </p>
+          <a
+            href="img/rockys-2.jpg"
+            download
+            class="link-image description-item"
+            >Download</a
+          >
+          <img src="img/rockys-2.jpg" alt="rockys-2" />
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div id="contact">
+        <div class="contact-info">
+          <h1>Wanna talk?</h1>
+          <p>
+            We love exploring beyond the borders of conventional photography,
+            and as such, we invite you to check out our studio, situated at
+            <a
+              href="https://maps.app.goo.gl/jQ2FXAru638N2JSH8"
+              class="link-primary"
+              >1 Barbados Avenue, Tampa, Florida</a
+            >. You may also contact us at this email address:
+            <a href="mailto:contact@naturallightworks.com" class="link-primary"
+              >contact@naturallightworks.com</a
+            >
+            for any additional inquiries.
+          </p>
+        </div>
+
+        <div class="contact-form">
+          <h1>Contact us</h1>
+          <form onsubmit="submitForm(event)" id="contact-form">
+            <div class="parallel-form-group">
+              <div class="form-group">
+                <label for="firstName">First name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  onchange="onChangeNotEmptyField('firstName', 'First name can not be empty.')"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  onchange="onChangeNotEmptyField('lastName', 'Last name can not be empty.')"
+                />
+              </div>
+            </div>
+            <div class="parallel-form-group">
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" name="company" id="company" />
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber">Phone number</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                onchange="onChangeEmail()"
+              />
+            </div>
+            <div class="form-group">
+              <label for="contactReason">Contact reason</label>
+              <select name="contactReason" id="contactReason">
+                <option value="Business">Business</option>
+                <option value="Careers">Careers</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea name="description" id="description"></textarea>
+            </div>
+            <div class="button-wrapper">
+              <button type="submit" class="button-primary" id="submit-button">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        &copy; Natural Light Works <%= new Date().getFullYear() %> All Rights
+        Reserved
+      </p>
+    </footer>
+  </body>
+</html>

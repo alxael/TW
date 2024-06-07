@@ -1,0 +1,40 @@
+{
+  "name": "tema",
+  "version": "1.0.0",
+  "description": "Partea a doua a temei.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "DEBUG=app:* nodemon index.js"
+  },
+  "author": "Alex Aelenei",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "chalk": "^4.1.2",
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.5",
+    "debug": "^4.3.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.4.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "1000",
+    "env": {
+      "PORT": 8080,
+      "NODE_ENV": "development"
+    }
+  }
+}

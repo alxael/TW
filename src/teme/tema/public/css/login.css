@@ -1,0 +1,62 @@
+body {
+  height: 100vh;
+}
+main {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-wrapper {
+  width: clamp(15rem, 50%, 30rem);
+  background-color: var(--background-secondary-color);
+  padding: 0.5rem 2rem 1rem;
+  border-radius: 0.5rem;
+}
+.form-wrapper > p {
+  font-size: 0.75rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.form-group > label {
+  margin-bottom: 0.25rem;
+}
+.form-group > input {
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0 0.5rem 0 0.5rem;
+  background-color: var(--background-primary-color);
+  color: var(--font-primary-color);
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.button-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.button-wrapper > button {
+  width: clamp(3rem, 30%, 5rem);
+  color: var(--primary-main-color);
+  border: solid;
+  border-width: 0;
+  border-radius: 0.25rem;
+  height: 1.5rem;
+  pointer-events: none;
+}
+.error-box {
+  width: clamp(15rem, 50%, 30rem);
+  height: 3rem;
+  background-color: crimson;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
