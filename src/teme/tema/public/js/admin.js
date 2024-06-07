@@ -20,10 +20,10 @@ const createContactData = (contactData) => {
     return {
       index: index + 1,
       email: data.email,
-      name: data.firstName + data.lastName,
+      name: data.firstName + " " + data.lastName,
       company: data.company ? data.company : undefined,
       phoneNumber: data.phoneNumber ? data.phoneNumber : undefined,
-      contactReason: data.contactReason ? data.loadContactData : undefined,
+      contactReason: data.contactReason ? data.contactReason : undefined,
       description: data.description ? data.description : undefined,
     };
   });
