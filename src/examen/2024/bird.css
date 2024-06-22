@@ -1,0 +1,86 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+.subcontainer-0 {
+  grid-area: sc0;
+  background-color: floralwhite;
+}
+.subcontainer-1 {
+  grid-area: sc1;
+  background-color: coral;
+}
+.subcontainer-2 {
+  grid-area: sc2;
+  background-color: floralwhite;
+}
+.subcontainer-3 {
+  grid-area: sc3;
+  background-color: floralwhite;
+}
+.subcontainer-4 {
+  grid-area: sc4;
+  background-color: floralwhite;
+}
+.subcontainer-6 {
+  grid-area: sc6;
+  background-color: coral;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 75px);
+  grid-template-rows: repeat(7, 75px);
+  grid-gap: 4px;
+  grid-template-areas:
+    ".   sc0 sc0 .   .  "
+    "sc1 sc0 sc0 .   .  "
+    ".   .   sc2 .   .  "
+    ".   .   sc3 .   .  "
+    ".   .   sc4 sc4 sc4"
+    ".   .   sc4 sc4 sc4"
+    ".   .   .   sc6 .  ";
+}
+.container > div {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-style: dotted;
+  border-width: 4px;
+  border-color: black;
+}
+.subcontainer-circle {
+  padding: 22px;
+  border: none;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+.subcontainer-circle:hover {
+  background-color: crimson;
+  color: crimson;
+  transform: scale(calc(1 / 3));
+  transition: all 0.3s linear;
+}
+
+@media (min-width: 350px) and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 22px;   
+    }
+    .container > div {
+        margin-right: 22px;
+    }
+    .subcontainer-circle {
+        transform: scaleX(0.5)
+    }
+  }
+  
